@@ -16,13 +16,20 @@ export default class IndexRoute extends Route {
     // };
     let response = await fetch('/api/rentals.json');
     let { data } = await response.json();
-    let { attributes } = data[0];
-    return attributes;
-    // console.log(data);
-    // data.map((element) => {
-    //   let { attributes } = element;
-    //   console.log(attributes);
-    //   return attributes;
-    // });
+    console.log(data[0]);
+    // let attributes = data[0].attributes;
+    // console.log(attributes);
+    // let ar = [];
+    // ar.push(attributes);
+    // return ar;
+    console.log(data);
+    let arr = data.map((element) => {
+      console.log(element);
+      let { attributes } = element;
+      console.log(attributes);
+      return attributes;
+    });
+    console.log(arr);
+    return arr;
   }
 }

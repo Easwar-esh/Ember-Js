@@ -1,4 +1,4 @@
-{{yield}}
+{{!-- {{yield}} --}}
 <article class="rental">
     <Rental::Image
     src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg"
@@ -8,6 +8,7 @@
     <h3>{{@rental.title}}</h3>
     <div class="detail owner">
       <span>Owner:</span> {{@rental.owner}}
+      {{!-- {{log @rental.owner}} --}}
     </div>
     <div class="detail type">
       <span>Type:</span> {{@rental.type}}

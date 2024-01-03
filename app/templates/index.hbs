@@ -6,12 +6,13 @@
     </Jumbo>
  <div class="rentals">
   <ul class="results">
+    {{!-- <li><Rental @rental={{@model}} /></li>
     <li><Rental @rental={{@model}} /></li>
-    <li><Rental @rental={{@model}} /></li>
-    <li><Rental @rental={{@model}} /></li>
-    {{#each @model as |rent|}}
-       <h1>{{rent.title}}</h1>
-      <li><Rental @rental={{@rent}} /></li>
+    <li><Rental @rental={{@model}} /></li> --}}
+    {{#each @model as |rental|}}
+       <h1>{{rental.title}}</h1>
+       {{!-- {{log rental}} --}}
+      <li><Rental @rental={{rental}} /></li>
     {{/each}}
   </ul>
 </div>
