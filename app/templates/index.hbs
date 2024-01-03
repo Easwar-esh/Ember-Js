@@ -1,0 +1,17 @@
+    <NavBar/>
+    <Jumbo>
+        <h2>Welcome to SuperRentals!</h2>
+         <p>We hope you find exactly what you're looking for in a place to stay.</p>
+         <LinkTo @route="about" class="button">About Us</LinkTo>
+    </Jumbo>
+ <div class="rentals">
+  <ul class="results">
+    <li><Rental @rental={{@model}} /></li>
+    <li><Rental @rental={{@model}} /></li>
+    <li><Rental @rental={{@model}} /></li>
+    {{#each @model as |rent|}}
+       <h1>{{rent.title}}</h1>
+      <li><Rental @rental={{@rent}} /></li>
+    {{/each}}
+  </ul>
+</div>
